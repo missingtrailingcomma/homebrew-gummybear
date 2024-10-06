@@ -1,8 +1,8 @@
 class Gummybear < Formula
   desc "Gummybear is a command hosting service for ALL your commands."
   homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.14/gummybear-client.tar.gz"
-  sha256 "e62e6d15062738a6d8a81a0623967633d790ddbb9e90133b940725515c5e4c26"
+  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.15/gummybear-client.tar.gz"
+  sha256 "90dc7c9e68ed6b1fc0851399601755d48f17ea987fbf140d447b87be818924fe"
 
   def install
     # install the binary
