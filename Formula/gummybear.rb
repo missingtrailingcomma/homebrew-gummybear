@@ -1,9 +1,8 @@
 class Gummybear < Formula
   desc "Gummybear is a command hosting service for ALL your commands."
   homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.10/gummybear-client.tar.gz"
-  sha256 "e7cd56c186aa7cad1939cbccf487fb0e6f35a67c3e0a79887d2995d53c749b8a"
-  version "0.0.10"
+  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.14/gummybear-client.tar.gz"
+  sha256 "e62e6d15062738a6d8a81a0623967633d790ddbb9e90133b940725515c5e4c26"
 
   def install
     # install the binary
@@ -15,7 +14,7 @@ class Gummybear < Formula
     files = [
       "gummybear.sh",
       "util.sh",
-      "dependencies/bash-preexec/bash-preexec.sh"
+      "dependencies/bash-preexec/bash-preexec.sh",
     ]
 
     # Copy files and preserve directory structure
@@ -35,6 +34,9 @@ class Gummybear < Formula
 
     mkdir_p etc/"gummybear/log"
 
+    mkdir_p etc/"gummybear/config"
+    cp "config/config.textproto", etc/"gummybear/config"
+
     setup_script = "setup.sh"
     setup_script_path = libexec/setup_script
     cp setup_script, setup_script_path
@@ -42,7 +44,7 @@ class Gummybear < Formula
   end
 
   service do
-    run [opt_bin/"gummybear-commander"]
+    run [opt_bin/"gummybear-commander", "--homebrew_base_dir=#{HOMEBREW_PREFIX}"]
     keep_alive true
     working_dir var
     log_path var/"gummybear/log/gummybear-commander.log"
