@@ -1,8 +1,8 @@
 class Gummybear < Formula
   desc "Gummybear is a command hosting service for ALL your commands."
   homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.15/gummybear-client.tar.gz"
-  sha256 "90dc7c9e68ed6b1fc0851399601755d48f17ea987fbf140d447b87be818924fe"
+  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.16/gummybear-client.tar.gz"
+  sha256 "46ac059fa48e0cb16131b6b5a96eac6b95bd12abd79a12d4f0a8158ce33b8571"
 
   def install
     # install the binary
@@ -36,11 +36,6 @@ class Gummybear < Formula
 
     mkdir_p etc/"gummybear/config"
     cp "config/config.textproto", etc/"gummybear/config"
-
-    setup_script = "setup.sh"
-    setup_script_path = libexec/setup_script
-    cp setup_script, setup_script_path
-    chmod "+x", setup_script_path
   end
 
   service do
@@ -53,9 +48,11 @@ class Gummybear < Formula
 
   def caveats
     <<~EOS
+      To complete installation, add the following line to your shell rc file:
 
-      🚨 Run the following command to install the shell script to your shell rc file:
-      🚨 #{libexec/"setup.sh"} #{libexec/"gummybear.sh"}
+        source #{libexec/"gummybear.sh"}
+
+      You will also need to restart your terminal for this change to take effect.
     EOS
   end
 end
