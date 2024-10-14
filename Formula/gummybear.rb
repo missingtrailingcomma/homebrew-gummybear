@@ -1,8 +1,8 @@
 class Gummybear < Formula
   desc "Gummybear is a command hosting service for ALL your commands."
   homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.16/gummybear-client.tar.gz"
-  sha256 "46ac059fa48e0cb16131b6b5a96eac6b95bd12abd79a12d4f0a8158ce33b8571"
+  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.17/gummybear-client.tar.gz"
+  sha256 "6bc9b720abb92a20b5e0bf88df2c4ce3c56edcc81486d56cd1c4e38f5610148d"
 
   def install
     # install the binary
@@ -12,8 +12,7 @@ class Gummybear < Formula
     bin.install "gummybear-commander"
 
     files = [
-      "gummybear.sh",
-      "util.sh",
+      "gummybear-shell-hook.sh",
       "dependencies/bash-preexec/bash-preexec.sh",
     ]
 
@@ -50,7 +49,7 @@ class Gummybear < Formula
     <<~EOS
       To complete installation, add the following line to your shell rc file:
 
-        source #{libexec/"gummybear.sh"}
+        source #{libexec/"gummybear-shell-hook.sh"}
 
       You will also need to restart your terminal for this change to take effect.
     EOS
