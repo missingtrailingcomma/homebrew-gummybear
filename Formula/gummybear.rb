@@ -1,8 +1,8 @@
 class Gummybear < Formula
     desc "Gummybear is a command hosting service for ALL your commands."
     homepage "https://github.com/missingtrailingcomma/gummybear-client"
-    url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.20/gummybear-client-source.tar.gz"
-    sha256 "dc66ed799002264cbdd995d88770fe895d32b52a07b02c0cbfe31795f15902eb"
+    url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.21/gummybear-client-source.tar.gz"
+    sha256 "c8e8ef3042ed928cefcfd875a45fcc65ca762ee403d34a5caa715aad55286c44"
   
     depends_on "go" => :build
   
