@@ -4,8 +4,8 @@ require "fileutils"
 class Gummybear < Formula
   desc "Gummybear is a command hosting service for ALL your commands."
   homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.23/gummybear-client-source.tar.gz"
-  sha256 "f9e0a423ad2337d76d37c06b6a55798ac4d8d2cbde1ad7520e71f61c94e34aee"
+  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.24/gummybear-client-source.tar.gz"
+  sha256 "505b6a6502e48b04289aa0e8a48df69f2897d0d175cabe1b3f6ee62f7e6e3167"
 
   depends_on "go" => :build
 
