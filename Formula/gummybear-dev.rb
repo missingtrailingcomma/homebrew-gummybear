@@ -1,4 +1,4 @@
-class Gummybear < Formula
+class GummybearDev < Formula
   desc "Gummybear saves your shell commands (DEV)"
   homepage "https://github.com/missingtrailingcomma/gummybear"
   url "file:///tmp/gummybear/gummybear-client-source.tar.gz"
