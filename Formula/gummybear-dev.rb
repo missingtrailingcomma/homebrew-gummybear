@@ -1,8 +1,8 @@
 class Gummybear < Formula
-  desc "Gummybear saves your shell commands"
-  homepage "https://github.com/missingtrailingcomma/gummybear-client"
-  url "https://github.com/missingtrailingcomma/gummybear-client/releases/download/v0.0.24/gummybear-client-source.tar.gz"
-  sha256 "505b6a6502e48b04289aa0e8a48df69f2897d0d175cabe1b3f6ee62f7e6e3167"
+  desc "Gummybear saves your shell commands (DEV)"
+  homepage "https://github.com/missingtrailingcomma/gummybear"
+  url "file:///tmp/gummybear/gummybear-client-source.tar.gz"
+  version "0.0.1"
 
   depends_on "go" => :build
 
